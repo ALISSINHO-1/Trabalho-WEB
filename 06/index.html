@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perguntas Frequentes</h1>
+        <p class="subtitle">Encontre respostas para as perguntas mais comuns</p>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary class="faq-question">O que é a tag &lt;details&gt;?</summary>
+                <div class="faq-answer">
+                    <p>A tag &lt;details&gt; é um elemento HTML5 que cria uma seção dobrável onde você pode esconder e revelar conteúdo. É muito útil para FAQs e listas de informações adicionais que não precisam estar sempre visíveis.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Como usar transições em CSS?</summary>
+                <div class="faq-answer">
+                    <p>A propriedade <code>transition</code> CSS permite animar mudanças de propriedades de forma suave. Você pode especificar quais propriedades transicionar, a duração, o timing function e o delay. Exemplo: <code>transition: all 0.3s ease-in-out;</code></p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Qual é a diferença entre &lt;details&gt; e &lt;summary&gt;?</summary>
+                <div class="faq-answer">
+                    <p>A tag &lt;summary&gt; é usada dentro de &lt;details&gt; para definir o título ou rótulo que fica sempre visível. Ao clicar em &lt;summary&gt;, o conteúdo adicional dentro de &lt;details&gt; é revelado ou ocultado.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Posso estilizar a tag &lt;details&gt; com CSS?</summary>
+                <div class="faq-answer">
+                    <p>Sim! Você pode estilizar tags &lt;details&gt; e &lt;summary&gt; usando CSS normal. Pode alterar cores, fontes, tamanhos, adicionar transições, e até customizar o marcador de expansão usando pseudo-elementos.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Como fazer uma transição suave de abertura/fechamento?</summary>
+                <div class="faq-answer">
+                    <p>Para animar a abertura e fechamento, você pode usar <code>max-height</code> com uma transição. Defina um <code>max-height</code> para o estado fechado (geralmente igual à altura do &lt;summary&gt;) e um valor maior para o estado aberto. A transição do <code>max-height</code> cria o efeito de slide suave.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Qual navegador suporta a tag &lt;details&gt;?</summary>
+                <div class="faq-answer">
+                    <p>A tag &lt;details&gt; é suportada por todos os navegadores modernos, incluindo Chrome, Firefox, Safari, Edge e Opera. Apenas navegadores muito antigos e Internet Explorer não suportam esta tag.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
