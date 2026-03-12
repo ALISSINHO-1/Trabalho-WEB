@@ -1,0 +1,29 @@
+/* estilos da página de blog */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffffff;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.posts {
+    list-style: square inside;
+    padding: 0;
+}
+.posts li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.posts h2 {
+    margin: 0;
+}
+.posts small {
+    color: #666;
+}
+.posts a {
+    text-decoration: none;
+    color: #0066cc;
+}
