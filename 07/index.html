@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="dot-grid"></div>
+
+  <div class="card">
+    <div class="header">
+      <p class="eyebrow">Bem-vindo de volta</p>
+      <h1>Acessar conta</h1>
+      <p>Entre com suas credenciais para continuar.</p>
+    </div>
+
+    <!-- Campo: Nome de usuário -->
+    <div class="field">
+      <label for="usuario">Nome de usuário</label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="seu.usuario"
+        autocomplete="username"
+      />
+    </div>
+
+    <!-- Campo: Senha -->
+    <div class="field">
+      <label for="senha">Senha</label>
+      <input
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="••••••••"
+        autocomplete="current-password"
+      />
+    </div>
+
+    <!-- Opções -->
+    <div class="options">
+      <label class="remember">
+        <input type="checkbox" id="lembrar" />
+        <span>Lembrar-me</span>
+      </label>
+      <a href="#" class="forgot">Esqueceu a senha?</a>
+    </div>
+
+    <!-- Botão -->
+    <button class="btn-login">Entrar</button>
+
+    <div class="divider"><span>ou</span></div>
+
+    <div class="footer">
+      Não tem uma conta? <a href="#">Criar conta</a>
+    </div>
+  </div>
+</body>
+</html>
