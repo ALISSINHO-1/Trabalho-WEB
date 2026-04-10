@@ -1,0 +1,86 @@
+/*
+Exercício 08 - Página de Produto
+Nome: Guilherme Cortez Lopes
+RA: 269966-2025
+*/
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Batmovel - Página de Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <input type="checkbox" id="modal-trigger" class="modal-state">
+
+    <div class="success-modal">
+    <div class="modal-content">
+        <label for="modal-trigger" class="close-btn">&times;</label>
+        <div class="success-icon">✔</div>
+        <h2>Sua compra foi finalizada com sucesso!</h2>
+        <p>O Batmovel já está a caminho da sua Bat-caverna.</p>
+       <label for="modal-trigger" class="buy-btn">Comprar</label>
+    </div>
+</div>
+
+
+    <main class="product-container">
+        <input type="radio" name="gallery" id="photo1" checked>
+        <input type="radio" name="gallery" id="photo2">
+        <input type="radio" name="gallery" id="photo3">
+        <input type="radio" name="gallery" id="photo4">
+
+        <section class="image-gallery">
+            <div class="thumbnails">
+                <label for="photo1" class="thumb-item">
+                    <img src="https://legobrasil.vtexassets.com/arquivos/ids/191386-1000-auto?v=638973620390470000&width=1000&height=auto&aspect=true" alt="Ângulo 1">
+                </label>
+                <label for="photo2" class="thumb-item">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltc166a714b63bf6c6/76332_WEB_SEC01_NOBG_en-gb.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5" alt="Ângulo 2">
+                </label>
+                <label for="photo3" class="thumb-item">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltc1eae54ea77a7201/76332_WEB_Lineup_NOBG_en-gb.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5" alt="Ângulo 3">
+                </label>
+                <label for="photo4" class="thumb-item">
+                    <img src="https://legobrasil.vtexassets.com/arquivos/ids/191387-1000-auto?v=638973620390470000&width=1000&height=auto&aspect=true" alt="Ângulo 4">
+                </label>
+            </div>
+
+            <div class="main-image-area">
+                <img src="https://legobrasil.vtexassets.com/arquivos/ids/191386-1000-auto?v=638973620390470000&width=1000&height=auto&aspect=true" class="img-content img1" alt="Batmóvel 1">
+                <img src="https://www.lego.com/cdn/cs/set/assets/bltc166a714b63bf6c6/76332_WEB_SEC01_NOBG_en-gb.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5" class="img-content img2" alt="Batmóvel 2">
+                <img src="https://www.lego.com/cdn/cs/set/assets/bltc1eae54ea77a7201/76332_WEB_Lineup_NOBG_en-gb.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5" class="img-content img3" alt="Batmóvel 3">
+                <img src="https://legobrasil.vtexassets.com/arquivos/ids/191387-1000-auto?v=638973620390470000&width=1000&height=auto&aspect=true" class="img-content img4" alt="Batmóvel 4">
+            </div>
+        </section>
+
+        <section class="product-details">
+            <span class="sku">#76332</span>
+            <h1 class="title">DC – O Batman™ Batmovel</h1>
+            
+            <div class="rating">☆☆☆☆☆ (10)</div>
+
+            <p class="price">R$ 299,99</p>
+            <p class="status">Em estoque agora</p>
+
+            <div class="actions">
+                <div class="qty-control">
+                    <button type="button">-</button>
+                    <input type="text" value="1" readonly>
+                    <button type="button">+</button>
+                </div>
+                <label for="modal-trigger" class="buy-btn">Comprar</label>
+            </div>
+
+            <div class="description-box">
+                <p>Prepare-se para combater o crime em Gotham com esta réplica detalhada do Batmovel do filme The Batman.</p>
+            </div>
+        </section>x 
+    </main>
+
+</body>
+</html>
