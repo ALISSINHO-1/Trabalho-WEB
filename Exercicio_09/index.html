@@ -1,0 +1,62 @@
+/*
+Exercício 09 - Task Engine
+Nome: Guilherme Cortez Lopes   
+RA: 269966-2025
+*/
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task Engine </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="todo-wrapper">
+        <header class="todo-header">
+            <h1>TASK <span> ENGINE</span></h1>
+            <p>Lista de pendências</p>
+        </header>
+
+        <section class="add-task-area">
+            <input type="text" placeholder="Nova tarefa de desenvolvimento..." disabled>
+            <button class="btn-disabled">ADICIONAR</button>
+        </section>
+
+        <ul class="task-container">
+            
+            <li class="task-card">
+                <input type="checkbox" id="task1">
+                <label for="task1" class="task-text">Estudar para as provas </label>
+                <div class="task-actions">
+                    <button type="button">✏️</button>
+                    <button type="button">🗑️</button>
+                </div>
+            </li>
+
+            <li class="task-card completed">
+                <input type="checkbox" id="task2" checked>
+                <label for="task2" class="task-text">Configurar banco de dados MySQL</label>
+                <div class="task-actions">
+                    <button type="button">✏️</button>
+                    <button type="button">🗑️</button>
+                </div>
+            </li>
+
+            <li class="task-card">
+                <input type="checkbox" id="task3">
+                <label for="task3" class="task-text">Subir Exercício 09 para o GitHub</label>
+                <div class="task-actions">
+                    <button type="button">✏️</button>
+                    <button type="button">🗑️</button>
+                </div>
+            </li>
+
+        </ul>
+    </main>
+
+</body>
+</html>

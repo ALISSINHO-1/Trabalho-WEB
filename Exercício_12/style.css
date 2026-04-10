@@ -1,0 +1,164 @@
+:root {
+    --gold: #d4af37;
+    --bg: #0a0a0a;
+    --card: #151515;
+}
+
+body {
+    background-color: var(--bg);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.header-main {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.header-main h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 10px;
+}
+
+.header-main h1 span {
+    color: var(--gold);
+}
+
+.header-main p {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+
+.galeria-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+figure {
+    background: var(--card);
+    margin: 0;
+    padding: 0;
+    border: 1px solid #222;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+figure:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+figure img {
+    width: 400px; 
+    height: 250px;
+    object-fit: cover;
+    display: block; 
+    filter: grayscale(40%);
+    transition: 0.5s;
+}
+
+figure:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+figcaption {
+    padding: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-top: 1px solid #222;
+    background: #111;
+}
+
+
+.zoom-toggle {
+    display: none; 
+}
+
+.zoom-toggle:checked + label figure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0,0,0,0.95);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.zoom-toggle:checked + label figure img {
+    width: auto;
+    max-width: 90%;
+    max-height: 70vh;
+    border: 2px solid var(--gold);
+}
+
+.zoom-toggle:checked + label figure figcaption {
+    background: transparent;
+    color: var(--gold);
+    font-size: 2rem;
+    border: none;
+}
+
+/* =========================================
+        RESPONSIVIDADE: CELULARES 
+   ========================================= */
+@media (max-width: 768px) {
+    
+   
+    .header-main {
+        padding: 40px 15px;
+    }
+
+    .header-main h1 {
+        font-size: 2rem; 
+        letter-spacing: 5px;
+    }
+ 
+    .galeria-container {
+        gap: 20px;
+    }
+
+    figure img {
+        width: 100%; 
+        height: auto;
+        aspect-ratio: 16 / 9; 
+    }
+
+    .zoom-toggle:checked + label figure img {
+        max-width: 95%; 
+        max-height: 50vh; 
+    }
+
+    .zoom-toggle:checked + label figure figcaption {
+        font-size: 1.2rem; 
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .zoom-toggle:checked + label figure::after {
+        content: "Toque para fechar";
+        color: #fff;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        margin-top: 10px;
+        opacity: 0.6;
+    }
+}

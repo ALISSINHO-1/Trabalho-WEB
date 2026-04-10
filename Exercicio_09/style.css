@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap');
+
+:root {
+    --bg-dark: #050508;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --neon-blue: #00d2ff;
+    --text-main: #ffffff;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.05), transparent 70%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 80px;
+}
+
+.todo-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.todo-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.todo-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 4px;
+}
+
+.todo-header h1 span { color: var(--neon-blue); }
+
+.add-task-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    opacity: 0.7; 
+}
+
+input[type="text"] {
+    flex: 1;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-disabled {
+    background: #333;
+    color: #888;
+    border: none;
+    padding: 0 15px;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.task-container {
+    list-style: none; 
+    padding: 0;
+}
+
+.task-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.task-text {
+    flex: 1;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked + .task-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.task-actions button:hover { filter: grayscale(0); }
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--neon-blue);
+}
+
+/* =========================================
+        RESPONSIVIDADE: CELULARES 
+   ========================================= */
+@media (max-width: 600px) {
+    
+    body {
+        padding-top: 40px; 
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .todo-header h1 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .task-card {
+        padding: 12px 10px;
+    }
+
+    .task-text {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .add-task-area {
+        flex-direction: column; 
+    }
+
+    .btn-disabled {
+        padding: 12px;
+        width: 100%; 
+    }
+}

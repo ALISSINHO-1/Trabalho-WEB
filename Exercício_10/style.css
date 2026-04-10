@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+    --bg-color: #0d0d0f;       
+    --card-bg: #16161a;         
+    --bat-yellow: #ffcc00;      
+    --border-color: #333336;    
+    --text-white: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: 'Special+Elite', 'Courier New', monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.background-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.content {
+    width: 90%;
+    max-width: 600px;
+    z-index: 20;
+    padding: 40px 0;
+}
+
+.main-header {
+    text-align: center;
+    border-bottom: 2px solid var(--bat-yellow);
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+.main-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: var(--bat-yellow);
+}
+
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+.photo-container {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+    outline: 4px solid #222;
+}
+
+.profile-img {
+    width: 300px; 
+    height: auto;
+    display: block;
+    filter: grayscale(100%) contrast(120%);
+}
+
+.character-name {
+    color: var(--bat-yellow);
+    font-size: 1.6rem;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+
+blockquote {
+    font-style: italic; 
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #bbb;
+    margin: 0;
+    padding: 10px 20px;
+    border-top: 1px dashed var(--border-color);
+}
+
+/* =========================================
+        RESPONSIVIDADE: CELULARES
+   ========================================= */
+@media (max-width: 600px) {
+    
+    .content {
+        width: 95%;
+        padding: 20px 0;
+    }
+
+    .main-header h1 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .profile-img {
+        width: 100%;       
+        max-width: 250px;  
+        height: auto;
+    }
+
+    .character-name {
+        font-size: 1.3rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 10px 5px;
+    }
+}
